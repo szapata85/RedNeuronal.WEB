@@ -7,27 +7,5 @@
     <script src="jscolor.js"></script>
 
     <input data-jscolor="{onInput:'update(this)', alpha:1.0}" id="colorInput">
-
-    <pre id="out" style="position:absolute; top:20px; left:300px;"></pre>
-
-<script>
-function update(picker) {
-    document.getElementById('out').innerHTML = [
-        'toString() = ' + picker.toString(),
-        'toHEXString() = ' + picker.toHEXString(),
-        'toRGBString() = ' + picker.toRGBString(),
-        'toRGBAString() = ' + picker.toRGBAString(),
-        'R = ' + picker.channel('R'),
-        'G = ' + picker.channel('G'),
-        'B = ' + picker.channel('B'),
-        'H = ' + picker.channel('H'),
-        'S = ' + picker.channel('S'),
-        'V = ' + picker.channel('V'),
-        'A = ' + picker.channel('A'),
-    ].join('\n');
-}
-
-jscolor.trigger('input'); // triggers 'onInput' on all color pickers when they are ready
-</script>
 </body>
 </html>
