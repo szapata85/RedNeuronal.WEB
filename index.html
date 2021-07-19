@@ -7,5 +7,17 @@
     <script src="jscolor.js"></script>
 
     <input class="jscolor {onFineChange:'update(this)'}" value="cc66ff">
+
+    <div id="sitio">
+        Mi sitio web
+    </div>
+    
+    <script type="text/javascript">
+        function update(color){
+            //console.log(color.toRGBAString());
+            var div = document.getElementById('sitio');
+            div.style.background = '#' + color;
+        }
+    </script>
 </body>
 </html>
